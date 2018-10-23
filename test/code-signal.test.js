@@ -73,7 +73,71 @@ describe('Code Signal Challenges:', () => {
                 [22, 24, 31, 39, 45],
                 [37, 34, 36, 47, 59]
             ])
-            // expect(boxBlur([])).to.deep.equal([])
+        })
+
+    })
+
+    describe('minesweeper', () => {
+
+        it('', () => {
+            const minesweeper = require('../challenges/code-signal/minesweeper.js')
+            expect(minesweeper([
+                [true, false, false],
+                [false, true, false],
+                [false, false, false]
+            ])).to.deep.equal([
+                [1, 2, 1],
+                [2, 1, 1],
+                [1, 1, 1]
+            ])
+            expect(minesweeper([
+                [false, false, false],
+                [false, false, false]
+            ])).to.deep.equal([
+                [0, 0, 0],
+                [0, 0, 0]
+            ])
+            expect(minesweeper([
+                [true, false, false, true],
+                [false, false, true, false],
+                [true, true, false, true]
+            ])).to.deep.equal([
+                [0, 2, 2, 1],
+                [3, 4, 3, 3],
+                [1, 2, 3, 1]
+            ])
+            expect(minesweeper([
+                [true, true, true],
+                [true, true, true],
+                [true, true, true]
+            ])).to.deep.equal([
+                [3, 5, 3],
+                [5, 8, 5],
+                [3, 5, 3]
+            ])
+            expect(minesweeper([
+                [false, true, true, false],
+                [true, true, false, true],
+                [false, false, true, false]
+            ])).to.deep.equal([
+                [3, 3, 3, 2],
+                [2, 4, 5, 2],
+                [2, 3, 2, 2]
+            ])
+            expect(minesweeper([
+                [true, false],
+                [true, false],
+                [false, true],
+                [false, false],
+                [false, false]
+            ])).to.deep.equal([
+                [1, 2],
+                [2, 3],
+                [2, 1],
+                [1, 1],
+                [0, 0]
+            ])
+
         })
 
     })
