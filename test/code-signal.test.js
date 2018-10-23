@@ -142,4 +142,18 @@ describe('Code Signal Challenges:', () => {
 
     })
 
+    describe('arrayReplace', () => {
+
+        it('', () => {
+            const arrayReplace = require('../challenges/code-signal/arrayReplace.js')
+            expect(arrayReplace([1, 2, 1], 1, 3)).to.deep.equal([3, 2, 3])
+            expect(arrayReplace([1, 2, 3, 4, 5], 3, 0)).to.deep.equal([1, 2, 0, 4, 5])
+            expect(arrayReplace([1, 1, 1], 1, 10)).to.deep.equal([10, 10, 10])
+            expect(arrayReplace([1, 2, 1, 2, 1], 2, 1)).to.deep.equal([1, 1, 1, 1, 1])
+            expect(arrayReplace([1, 2, 1, 2, 1], 2, 2)).to.deep.equal([1, 2, 1, 2, 1])
+            expect(arrayReplace([3, 1], 3, 9)).to.deep.equal([9, 1])
+        })
+
+    })
+
 })
