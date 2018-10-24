@@ -156,4 +156,22 @@ describe('Code Signal Challenges:', () => {
 
     })
 
+    describe('evenDigitsOnly', () => {
+
+        it('', () => {
+            const evenDigitsOnly = require('../challenges/code-signal/evenDigitsOnly.js')
+            expect(evenDigitsOnly(248622)).to.be.true
+            expect(evenDigitsOnly(642386)).to.be.false
+            expect(evenDigitsOnly(248842)).to.be.true
+            expect(evenDigitsOnly(1)).to.be.false
+            expect(evenDigitsOnly(8)).to.be.true
+            expect(evenDigitsOnly(2462487)).to.be.false
+            expect(evenDigitsOnly(468402800)).to.be.true
+            expect(evenDigitsOnly(2468428)).to.be.true
+            expect(evenDigitsOnly(5468428)).to.be.false
+            expect(evenDigitsOnly(7468428)).to.be.false
+        })
+
+    })
+
 })
