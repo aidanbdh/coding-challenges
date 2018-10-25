@@ -174,4 +174,22 @@ describe('Code Signal Challenges:', () => {
 
     })
 
+    describe('variableName', () => {
+
+        it('', () => {
+            const variableName = require('../challenges/code-signal/variableName.js')
+            expect(variableName("var_1__Int")).to.be.true
+            expect(variableName('qq-q')).to.be.false
+            expect(variableName('2w2')).to.be.false
+            expect(variableName(' variable')).to.be.false
+            expect(variableName('va[riable0')).to.be.false
+            expect(variableName('variable0')).to.be.true
+            expect(variableName('a')).to.be.true
+            expect(variableName('_Aas_23')).to.be.true
+            expect(variableName('a a_2')).to.be.false
+            expect(variableName('0ss')).to.be.false
+        })
+
+    })
+
 })
