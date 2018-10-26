@@ -18,5 +18,4 @@ module.exports = name => {
             return false
     
     return true
-
 }
