@@ -18,4 +18,18 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('urlify', () => {
+
+        it('', () => {
+            const urlify = require('../challenges/cracking-the-coding-interview/urlify.js')
+            expect(urlify('String with spaces.')).to.equal('String%20with%20spaces.')
+            expect(urlify(' ')).to.equal('%20')
+            expect(urlify(' Foo Bar')).to.equal('%20Foo%20Bar')
+            expect(urlify('Bar Foo ')).to.equal('Bar%20Foo%20')
+            expect(urlify('Double  Space')).to.equal('Double%20%20Space')
+            expect(urlify('   ')).to.equal('%20%20%20')
+        })
+
+    })
+
 })
