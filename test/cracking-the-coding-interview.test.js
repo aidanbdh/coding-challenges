@@ -32,4 +32,18 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('palendromePermutation', () => {
+
+        it('', () => {
+            const palendromePermutation = require('../challenges/cracking-the-coding-interview/palendromePermutation.js')
+            expect(palendromePermutation('acto cat')).to.be.true
+            expect(palendromePermutation('aco Tact')).to.be.true
+            expect(palendromePermutation('TACOTAC')).to.be.true
+            expect(palendromePermutation('octos cat')).to.be.false
+            expect(palendromePermutation('tacotaco')).to.be.true
+            expect(palendromePermutation('palendrome')).to.be.false
+        })
+
+    })
+
 })
