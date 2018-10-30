@@ -45,5 +45,18 @@ describe('cracking-the-coding-interview', () => {
         })
 
     })
+    
+    describe('oneAway', () => {
+
+        it('', () => {
+            const oneAway = require('../challenges/cracking-the-coding-interview/oneAway.js')
+            expect(oneAway('pale', 'ple')).to.be.true
+            expect(oneAway('pales', 'pale')).to.be.true
+            expect(oneAway('pale', 'bale')).to.be.true
+            expect(oneAway('pale', 'bake')).to.be.false
+            expect(oneAway('pale', 'pale')).to.be.true
+        })
+
+    })
 
 })

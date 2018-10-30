@@ -23,8 +23,6 @@ module.exports = str => {
         if(index === i) 
             index = str.indexOf(char)
 
-        console.log(str)
-
         if(index === i)
             if(mid)
                 return false
