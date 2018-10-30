@@ -192,4 +192,18 @@ describe('Code Signal Challenges:', () => {
 
     })
 
+    describe('alphabeticShift', () => {
+
+        it('', () => {
+            const alphabeticShift = require('../challenges/code-signal/alphabeticShift.js')
+            expect(alphabeticShift('crazy')).to.equal('dsbaz')
+            expect(alphabeticShift('z')).to.equal('a')
+            expect(alphabeticShift('aaaabbbccd')).to.equal('bbbbcccdde')
+            expect(alphabeticShift('fuzzy')).to.equal('gvaaz')
+            expect(alphabeticShift('codesignal')).to.equal('dpeftjhobm')
+
+        })
+
+    })
+
 })
