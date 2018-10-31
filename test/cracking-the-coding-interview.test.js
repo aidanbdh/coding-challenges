@@ -59,4 +59,17 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('stringCompression', () => {
+
+        it('', () => {
+            const stringCompression = require('../challenges/cracking-the-coding-interview/stringCompression.js')
+            expect(stringCompression('aaa')).to.equal('a3')
+            expect(stringCompression('aaabbbc')).to.equal('a3b3c1')
+            expect(stringCompression('aaaabaa')).to.equal('a4b1a2')
+            expect(stringCompression('abc')).to.equal('abc')
+            expect(stringCompression('aabbcc')).to.equal('aabbcc')
+        })
+
+    })
+
 })
