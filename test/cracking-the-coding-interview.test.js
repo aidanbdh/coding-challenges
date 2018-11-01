@@ -72,4 +72,40 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('zeroMatrix', () => {
+
+        it('', () => {
+            const zeroMatrix = require('../challenges/cracking-the-coding-interview/zeroMatrix.js')
+            expect(zeroMatrix([
+                [1, 1, 1],
+                [1, 1, 0],
+                [0, 1, 1]
+            ])).to.deep.equal([
+                [0, 1, 0],
+                [0, 0, 0],
+                [0, 0, 0]
+            ])
+            expect(zeroMatrix([
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1]
+            ])).to.deep.equal([
+                [1, 0, 1],
+                [0, 0, 0],
+                [1, 0, 1]
+            ])
+            expect(zeroMatrix([
+                [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 1]
+            ])).to.deep.equal([
+                [1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0],
+                [1, 1, 1, 1, 0]
+            ])
+        })
+    })
+
 })
