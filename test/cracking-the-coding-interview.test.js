@@ -108,4 +108,13 @@ describe('cracking-the-coding-interview', () => {
         })
     })
 
+    describe('stringRotation', () => {
+
+        it('', () => {
+            const stringRotation = require('../challenges/cracking-the-coding-interview/stringRotation.js')
+            expect(stringRotation('waterbottle', 'erbottlewat'))
+        })
+
+    })
+
 })
