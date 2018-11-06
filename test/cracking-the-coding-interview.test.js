@@ -117,4 +117,32 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('removeDups', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const removeDups = require('../challenges/cracking-the-coding-interview/removeDups.js')
+
+            const head = new Node('a')
+            const b = new Node('b')
+            const d = new Node('b')
+            const c = new Node('c')
+            const e = new Node('e')
+            const f = new Node('f')
+            head.append(b)
+            b.append(c)
+            c.append(d)
+            d.append(e)
+            e.append(f)
+            f.append(new Node('a'))
+
+            removeDups(head)
+
+            expect(d.data).to.be.null
+            expect(f.next).to.be.null
+            expect(c.next).to.equal(e)
+        })
+
+    })
+
 })
