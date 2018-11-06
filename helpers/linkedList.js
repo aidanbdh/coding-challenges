@@ -22,8 +22,10 @@ function node(data) {
     }
 
     this.delete = () => {
-        this.next.prev = prev
-        this.prev.next = next
-        this = {}
+        if(this.next)
+            this.next.prev = this.prev
+        if(this.prev)
+            this.prev.next = this.next
+        this.data = null
     }
 }
