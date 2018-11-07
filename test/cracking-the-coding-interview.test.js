@@ -145,4 +145,32 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('kthToLast', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const kthToLast = require('../challenges/cracking-the-coding-interview/kthToLast.js')
+
+            const head = new Node('a')
+            const b = new Node('b')
+            const c = new Node('c')
+            const d = new Node('d')
+            const e = new Node('e')
+            const tail = new Node('f')
+            head.append(b)
+            b.append(c)
+            c.append(d)
+            d.append(e)
+            e.append(tail)
+
+            expect(kthToLast(head, 1)).to.equal(e)
+            expect(kthToLast(head, 0)).to.equal(tail)
+            expect(kthToLast(head, 3)).to.equal(c)
+            expect(kthToLast(head, 5)).to.equal(head)
+            expect(kthToLast(head, 6)).to.be.null
+            expect(kthToLast(head, 7)).to.be.null
+        })
+
+    })
+
 })
