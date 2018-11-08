@@ -26,6 +26,8 @@ function node(data) {
             this.next.prev = this.prev
         if(this.prev)
             this.prev.next = this.next
+        this.next = null
+        this.prev = null
         this.data = null
     }
 }
