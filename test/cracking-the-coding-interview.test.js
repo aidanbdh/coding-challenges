@@ -173,4 +173,38 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('deleteMiddleNode', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const deleteMiddleNode = require('../challenges/cracking-the-coding-interview/deleteMiddleNode.js')
+
+            const head = new Node('a')
+            const b = new Node('b')
+            const c = new Node('c')
+            const d = new Node('d')
+            const e = new Node('e')
+            const tail = new Node('f')
+            head.append(b)
+            b.append(c)
+            c.append(d)
+            d.append(e)
+            e.append(tail)
+
+            deleteMiddleNode(c)
+            expect(c.data).to.be.null
+            expect(c.prev).to.be.null
+            expect(c.next).to.be.null
+            deleteMiddleNode(head)
+            expect(head.data).to.equal('a')
+            expect(head.prev).to.be.null
+            expect(head.next).to.equal(b)
+            deleteMiddleNode(tail)
+            expect(tail.data).to.equal('f')
+            expect(tail.prev).to.equal(e)
+            expect(tail.next).to.be.null
+        })
+
+    })
+
 })
