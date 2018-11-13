@@ -233,4 +233,33 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('palindrome', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const palindrome = require('../challenges/cracking-the-coding-interview/palindrome.js')
+
+            const head = new Node('a')
+            const b = new Node('b')
+            const c = new Node('c')
+            const d = new Node('c')
+            const e = new Node('b')
+            const tail = new Node('a')
+            head.append(b)
+            b.append(c)
+            c.append(d)
+            d.append(e)
+            e.append(tail)
+
+            expect(palindrome(head)).to.be.true
+            c.delete()
+            expect(palindrome(head)).to.be.true
+            b.delete()
+            expect(palindrome(head)).to.be.false
+            e.delete()
+            expect(palindrome(head)).to.be.true
+        })
+
+    })
+
 })
