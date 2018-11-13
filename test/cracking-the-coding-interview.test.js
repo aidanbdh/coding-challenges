@@ -207,4 +207,30 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('sumLists', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const sumLists = require('../challenges/cracking-the-coding-interview/sumLists.js')
+
+            const heada = new Node('1')
+            const b = new Node('6')
+            const c = new Node('7')
+
+            const headd = new Node('3')
+            const e = new Node('4')
+            const tail = new Node('5')
+
+            heada.append(b)
+            b.append(c)
+
+            headd.append(e)
+            e.append(tail)
+
+            expect(sumLists(heada, headd)).to.equal(761 + 543)
+            expect(sumLists(headd, heada)).to.equal(1304)
+        })
+
+    })
+
 })
