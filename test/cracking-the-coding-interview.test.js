@@ -262,4 +262,37 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('intersection', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const intersection = require('../challenges/cracking-the-coding-interview/intersection.js')
+
+            const head = new Node('a')
+            const b = new Node('b')
+            const c = new Node('c')
+            const headd = new Node('d')
+            const e = new Node('e')
+            const tail = new Node('f')
+
+            head.append(b)
+            b.append(c)
+
+            headd.append(e)
+            e.append(b)
+            b.append(tail)
+
+            expect(intersection(head, headd)).to.equal(b)
+
+            const diff = new Node('a')
+            diff.append(new Node('b'))
+
+            const same = new Node('c')
+            same.append(new Node('b'))
+
+            expect(intersection(diff, same)).to.be.false
+        })
+
+    })
+
 })
