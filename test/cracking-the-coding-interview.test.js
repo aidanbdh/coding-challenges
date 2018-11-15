@@ -295,4 +295,30 @@ describe('cracking-the-coding-interview', () => {
 
     })
 
+    describe('loopDetection', () => {
+
+        it('', () => {
+            const Node = require('../helpers/linkedList.js')
+            const loopDetection = require('../challenges/cracking-the-coding-interview/loopDetection.js')
+
+            const head = new Node('a')
+            const b = new Node('b')
+            const c = new Node('c')
+            const d = new Node('d')
+            const e = new Node('e')
+            const tail = new Node('f')
+            head.append(b)
+            b.append(c)
+            c.append(d)
+            d.append(e)
+            e.append(tail)
+            tail.next = head
+
+            expect(loopDetection(head)).to.equal(head)
+            d.next = b
+            expect(loopDetection(head)).to.equal(b)
+        })
+
+    })
+
 })
